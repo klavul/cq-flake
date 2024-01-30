@@ -76,6 +76,7 @@
           packages = {
             inherit (python.pkgs) cadquery;
             inherit cq-kit cq-warehouse;
+            pkgs.hello;
 
             cq-editor = pkgs.libsForQt5.callPackage ./expressions/cq-editor.nix {
               python3Packages = python.pkgs // { inherit cq-kit cq-warehouse; };
